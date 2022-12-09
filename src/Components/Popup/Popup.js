@@ -1,6 +1,6 @@
-import React from "react";
-import Popup from "reactjs-popup";
-import "./Popup.css";
+import React from 'react';
+import Popup from 'reactjs-popup';
+import './Popup.css';
 
 export default (props) => (
   <Popup
