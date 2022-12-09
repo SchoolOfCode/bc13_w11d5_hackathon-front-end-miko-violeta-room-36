@@ -1,5 +1,8 @@
 .modal {
     font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.17);
+    padding: 20px;
+    border-radius: 2px;
   }
   .modal > .header {
     width: 100%;
@@ -7,10 +10,17 @@
     font-size: 18px;
     text-align: center;
     padding: 5px;
+
+  }
+  .header h1{
+    background-color: rgba(255, 255, 255, 0.236);
   }
   .modal > .content {
     width: 100%;
     padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   .modal > .actions {
     width: 100%;
@@ -31,3 +41,20 @@
     border-radius: 18px;
     border: 1px solid #cfcece;
   }
+  .content p{
+    /* padding-top: 5px; */
+    padding: 2px;
+    font-weight: 600;
+    font-size:larger;
+    background-color: rgba(255, 255, 255, 0.236);
+  }
+  .content img{
+    height: 250px;
+  }
+
+  #descriptionExe{
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+

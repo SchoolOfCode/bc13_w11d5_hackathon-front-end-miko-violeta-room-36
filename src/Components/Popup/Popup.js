@@ -1,22 +1,24 @@
-import React from 'react';
-import Popup from 'reactjs-popup';
-import "./Popup.css"
+import React from "react";
+import Popup from "reactjs-popup";
+import "./Popup.css";
 
 export default (props) => (
   <Popup
-    trigger={<button className="button">{props.dayButton}</button>}
+    trigger={<button className="DayButton">{props.dayButton}</button>}
     modal
     nested
   >
-    {close => (
+    {(close) => (
       <div className="modal">
         <button className="close" onClick={close}>
           &times;
         </button>
-        <div className="header"><h1>Day {props.dayHeader}</h1></div>
+        <div className="header">
+          <h1>Day {props.dayHeader}</h1>
+        </div>
         <div className="content">
           <p>{props.dayName}</p>
-          <img src={props.dayImg} alt="yoga pic"/>
+          <img src={props.dayImg} alt="yoga pic" />
         </div>
         <div className="actions">
           <Popup
@@ -25,7 +27,7 @@ export default (props) => (
             nested
           >
             <span>
-            <p>{props.dayDescriptionPopup}</p>
+              <p id="descriptionExe">{props.dayDescriptionPopup}</p>
             </span>
           </Popup>
         </div>
