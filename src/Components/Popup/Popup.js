@@ -13,33 +13,21 @@ export default (props) => (
         <button className="close" onClick={close}>
           &times;
         </button>
-        <div className="header"><h1>{props.dayHeader}</h1></div>
+        <div className="header"><h1>Day {props.dayHeader}</h1></div>
         <div className="content">
-          <p>{props.dayDescription}</p>
+          <p>{props.dayName}</p>
           <img src={props.dayImg} alt="yoga pic"/>
         </div>
         <div className="actions">
           <Popup
-            trigger={<button className="button"> Trigger </button>}
+            trigger={<button className="button">Exercise Description</button>}
             position="top center"
             nested
           >
             <span>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-              magni omnis delectus nemo, maxime molestiae dolorem numquam
-              mollitia, voluptate ea, accusamus excepturi deleniti ratione
-              sapiente! Laudantium, aperiam doloribus. Odit, aut.
+            <p>{props.dayDescriptionPopup}</p>
             </span>
           </Popup>
-          <button
-            className="button"
-            onClick={() => {
-              console.log('modal closed ');
-              close();
-            }}
-          >
-            close modal
-          </button>
         </div>
       </div>
     )}

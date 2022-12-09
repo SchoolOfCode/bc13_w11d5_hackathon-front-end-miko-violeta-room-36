@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Popup from "../Popup/Popup";
 // import Popup from "reactjs-popup";
 
@@ -13,7 +13,7 @@ import "./App.css";
 function App() {
   //   const [day, setDay] = useState("");
   //   const [subject, setSubject] = useState("");
-  //   const [daySubArr, setDaySubArr] = useState([]);
+    const [daySubArr, setDaySubArr] = useState([]);
   //   // const [postArray, setPostArray] = useState([]);
   //   const [result, setResult] = useState("");
   //   const [postObj, setPostObj] = useState({});
@@ -21,15 +21,15 @@ function App() {
   //   const {darkMode}  = useContext(DarkModeContext)
   //   const {toggleDarkMode} = useContext(DarkModeContext)
 
-  //   useEffect(() => {
-  //     async function getData() {
-  //       const response = await fetch("http://localhost:3001/api");
-  //       const data = await response.json();
-  //       console.log(data);
-  //       setDaySubArr(data.payload);
-  //     }
-  //     getData();
-  //   }, [result]);
+    useEffect(() => {
+      async function getYoga() {
+        const response = await fetch("http://localhost:3001/api");
+        const data = await response.json();
+        console.log(data);
+        setDaySubArr(data.payload);
+      }
+      getYoga();
+    }, []);
 
   //   function inputValueDay(e) {
   //     setDay(e.target.value);
@@ -74,7 +74,10 @@ function App() {
         <h1>Advent of Yoga!</h1>
       </div>
       <div className="calendar-container">
-        <Popup dayButton="1" dayHeader="Day 1" dayDescription="Yoga exe description" dayImg="https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half/public/field_blog_entry_images/treesanta3577845.png?itok=KvKKXlnX"/>
+        {daySubArr.map((day)=>{
+          return <Popup  dayButton={day.id} dayHeader={day.id} dayName={day.name} dayImg={day.img_link} dayDescriptionPopup={day.description}/>
+        })}
+        {/* <Popup dayButton="1" dayDescriptionPopup="dayDescriptionPopup" dayHeader="Day 1" dayName="Yoga exe description" dayImg="https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half/public/field_blog_entry_images/treesanta3577845.png?itok=KvKKXlnX"/> */}
       </div>
     </div>
 
