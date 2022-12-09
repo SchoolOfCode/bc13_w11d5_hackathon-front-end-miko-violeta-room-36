@@ -7,8 +7,7 @@ import useFetch from '../../Hooks/useFetch';
 import './App.css';
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
-  const { toggleDarkMode } = useContext(DarkModeContext);
+  const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const [data] = useFetch(`http://localhost:3001/api`);
 
   return [
@@ -41,7 +40,7 @@ function App() {
           buttonClick={toggleDarkMode}
         />
       </div>
-    </div>
+    </div>,
   ];
 }
 
