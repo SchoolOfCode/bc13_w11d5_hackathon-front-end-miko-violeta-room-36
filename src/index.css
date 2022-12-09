@@ -12,9 +12,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  background-image: url(https://i.pinimg.com/736x/1d/48/02/1d4802dc9420e38bb1004e1aa3073833.jpg);
+  /* background-image: url(https://i.pinimg.com/736x/1d/48/02/1d4802dc9420e38bb1004e1aa3073833.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 
 code {

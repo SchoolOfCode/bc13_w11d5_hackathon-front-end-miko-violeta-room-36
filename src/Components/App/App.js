@@ -11,9 +11,9 @@ function App() {
   const { toggleDarkMode } = useContext(DarkModeContext);
   const [data] = useFetch(`http://localhost:3001/api`);
 
-  return (
+  return [
     <div className={darkMode ? `dark` : `app-container`}>
-      <div className="header-container">
+      <div className={darkMode ? `dark-header-container` : `header-container`}>
         <h1>Advent of Yoga!</h1>
       </div>
       <div className="calendar-container">
@@ -42,7 +42,7 @@ function App() {
         />
       </div>
     </div>
-  );
+  ];
 }
 
 export default App;
