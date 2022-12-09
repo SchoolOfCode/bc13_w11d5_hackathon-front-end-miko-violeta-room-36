@@ -1,0 +1,26 @@
+.dark {
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+
+.app-container {
+    background-color: white;
+    color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.calendar-container{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+.calendar-container p{
+    padding: 20px;
+    border: 2px solid black;
+}
+.ul-container{
+    height: 80%;
+}
