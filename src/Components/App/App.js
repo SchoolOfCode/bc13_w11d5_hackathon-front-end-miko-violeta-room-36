@@ -3,6 +3,7 @@ import Popup from '../Popup/Popup';
 import Button from '../Button/Button';
 import { DarkModeContext } from '../DarkModeContext.js';
 import useFetch from '../../Hooks/useFetch';
+import "../../Fonts/ChristmasDream.ttf"
 
 import './App.css';
 
@@ -18,7 +19,7 @@ function App() {
       <div className="calendar-container">
         {data.map((day) => {
           return (
-            <div className="day-container">
+            <div className={darkMode ? `dark-day-container` : `day-container`}>
               <Popup
                 dayButton={day.id}
                 dayHeader={day.id}
