@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import Popup from '../Popup/Popup';
 import Button from '../Button/Button';
 import { DarkModeContext } from '../DarkModeContext.js';
@@ -42,9 +42,6 @@ function App() {
         />
       </div>
     </div>
-
-    // <div className={darkMode ? `dark` : `app-container`}>
-    //   <Button buttonText={darkMode ? `Light Mode` : `Dark Mode`} buttonClick={toggleDarkMode} />
   );
 }
 
