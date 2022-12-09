@@ -9,7 +9,8 @@ import './App.css';
 
 function App() {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
-  const [data] = useFetch(`http://localhost:3001/api`);
+  // const [data] = useFetch(`http://localhost:3001/api`);
+  const [data] = useFetch(`https://advent-of-yoga-miko-violeta.onrender.com`);
 
   return [
     <div className={darkMode ? `dark` : `app-container`}>
